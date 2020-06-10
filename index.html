@@ -20,11 +20,14 @@
           ></a-mixin>
         <a-mixin id="left" position = "-1.6 0 0" ></a-mixin>
         <a-mixin id="right" position = "1.6 0 0" ></a-mixin>
-        <a-mixin id = "O-tile" material = "color : red" position = "0.3 0 -0.3" rotation = "0 120 0" side = "double" text = "value: O; color:black; align:center; width : 15"></a-mixin>
-        <a-mixin id = "X-tile"  material = "color : green" position = "-0.2 0 0" rotation = "0 -120 0" side = "double" text = "value: X; color:black; align:center; width : 15"></a-mixin>
-        <a-mixin id = "blank-tile" position = "0 0 0.3" ></a-mixin>
+        <a-mixin id = "O-tile" material = "color : red; side:double" position = "-0.18 0 -0.15" rotation = "0 60 0" side = "double" text = "value: O; color:black; align:center; width : 15"
+          event-set__click = " _target: .test; rotation : 0 0 0;"></a-mixin>
+        <a-mixin id = "X-tile"  material = "color : green; side:double" position = "0.15 0 -0.15" rotation = "0 -60 0"  text = "value: X; color:black; align:center; width : 15"
+          event-set__click = " _target: .test; rotation : 0 240 0;"></a-mixin>
+        <a-mixin id = "blank-tile" position = "0 0 0.3" 
+        event-set__click = " _target: .test; rotation : 0 120 0;"></a-mixin>
         <a-mixin id="selectable" 
-          event-set__click = " _target: .test; rotation : 0 120 0;"></a-mixin>
+          ></a-mixin>
         <a-mixin id="cursor-mixin" cursor="rayOrigin:mouse"></a-mixin>
       </a-assets>
       <a-camera mixin="cursor-mixin"></a-camera>
